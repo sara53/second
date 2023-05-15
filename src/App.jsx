@@ -1,20 +1,24 @@
+import { useState } from "react";
 import "./App.css";
-import Counter from "./components/Counter";
-import { MyNav } from "./components/MyNav";
-import MySlider from "./components/MySlider";
-import Products from "./components/Products";
+import Content from "./components/functionComponents/Content";
+import { MyCounter } from "./components/functionComponents/MyCounter";
+import { MyNav } from "./components/functionComponents/MyNav";
+import MySlider from "./components/functionComponents/MySlider";
 
 /**
  * React Hooks
  *
  */
 function App() {
+  let [fname, setFname] = useState("mona");
+
+  let greet = (data) => {
+    setFname(data);
+  };
   return (
     <div>
-      {/* <MyNav />
-      <MySlider />
-      <Products /> */}
-      <Counter />
+      <h2 className="bg-light text-center p-3">{fname}</h2>
+      <Content test={greet} />
     </div>
   );
 }
