@@ -4,6 +4,10 @@ import { MyNav } from "./components/MyNav";
 import MySlider from "./components/MySlider";
 import Products from "./components/Products";
 
+/**
+ * React Hooks
+ *
+ */
 function App() {
   return (
     <div>
